@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@500&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .logo{
+        margin:2rem;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          180deg,
+          #fff 15.28%,
+          rgba(155, 115, 79, 0.96) 100%
+        );
+        font-family: Roboto;
+        display: flex;
+      }
+
+      .login-text {
+        color: #9b734f;
+        font-size: 2.1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .login-main {
+        margin: 12rem 35rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .login-panel {
+        width: 30rem;
+        height: 32rem;
+        flex-shrink: 0;
+        border-radius: 2.65rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .login-panel form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .login-button {
+        width: 26.98994rem;
+        height: 3.80513rem;
+        flex-shrink: 0;
+        background: linear-gradient(
+          90deg,
+          #9b734f 5.41%,
+          #9b734f 47.9%,
+          #9b734f 90.81%
+        );
+        border: none;
+        border-radius: 2.65rem;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+      }
+      .login-button p {
+        color: #fff;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 1.59288rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .login-register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .login-email,
+      .login-password {
+        display: flex;
+        margin: 4rem 1rem 1rem 1rem;
+      }
+      input {
+        border: 0;
+        padding-left: 1rem;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #9b734f;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./src/images/logo.png" alt="logo" />
+      </div>
+
+      <div class="login-main">
+        <div class="login-text">Logowanie</div>
+        <div class="login-panel">
+          <form action="#">
+            <div class="login-email">
+              <label for="email"
+                ><img src="./src/images/Vector.png" alt=""
+              /></label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <hr />
+            <div class="login-password">
+              <label for="password"
+                ><img src="./src/images/Union.svg" alt="union"
+              /></label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Hasło"
+                required
+              />
+            </div>
+            <hr />
+
+            <button type="submit" class="login-button">Zaloguj</button>
+          </form>
+          <div class="login-register">
+            <a href="#">Nie pamietasz hasła?</a>
+
+            <p>
+              Nie masz konta? <span><a href="">Zarejestruj się</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

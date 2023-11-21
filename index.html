@@ -10,10 +10,14 @@
         margin: 0;
         padding: 0;
       }
-      .logo{
-        margin:2rem;
+      .logo {
+        margin: 2rem;
+        flex-grow: 1;
       }
-      .container {
+      .logo img {
+        width: 100%;
+      }
+      body {
         width: 100vw;
         height: 100vh;
         background: linear-gradient(
@@ -21,26 +25,28 @@
           #fff 15.28%,
           rgba(155, 115, 79, 0.96) 100%
         );
+      }
+      .container {
         font-family: Roboto;
         display: flex;
       }
 
       .login-text {
         color: #9b734f;
-        font-size: 2.1rem;
+        font-size: 2em;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
       }
       .login-main {
-        margin: 12rem 35rem;
+        width: 23em;
+        height: 25em;
+        margin: 10% 10% 0 10%;
         display: flex;
         flex-direction: column;
+        flex-grow: 2;
       }
       .login-panel {
-        width: 30rem;
-        height: 32rem;
-        flex-shrink: 0;
         border-radius: 2.65rem;
         background: #fff;
         display: flex;
@@ -51,10 +57,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 95%;
       }
       .login-button {
-        width: 26.98994rem;
-        height: 3.80513rem;
+        height: 4em;
         flex-shrink: 0;
         background: linear-gradient(
           90deg,
@@ -64,14 +70,13 @@
         );
         border: none;
         border-radius: 2.65rem;
-        margin-top: 2rem;
-        margin-bottom: 6rem;
+        margin: 2em 2em 4em 2em;
       }
       .login-button p {
         color: #fff;
         text-align: center;
         font-family: Roboto;
-        font-size: 1.59288rem;
+        font-size: 1.5em;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -81,15 +86,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2em;
       }
       .login-email,
       .login-password {
         display: flex;
-        margin: 4rem 1rem 1rem 1rem;
+        margin: 4em 1em 1em 1em;
       }
       input {
         border: 0;
-        padding-left: 1rem;
+        padding-left: 1em;
       }
       a:link,
       a:visited {
@@ -102,6 +108,39 @@
         font-weight: 400;
         line-height: normal;
         padding: 0.5rem;
+      }
+
+      @media screen and (max-width: 800px) {
+        .container {
+          font-family: Roboto;
+          display: flex;
+          flex-direction: column;
+        }
+        .logo {
+          text-align: center;
+          height: 0.5em;
+          margin-bottom: 2em;
+        }
+        .logo img {
+          width: 70%;
+          margin: 0 auto;
+          justify-content: center;
+        }
+        .login-main {
+          margin: auto;
+          width: 20em;
+          height: 22em;
+        }
+        .login-text {
+          margin-top: 2em;
+          margin-bottom: 1em;
+          font-size: 1.5em;
+        }
+        .login-email,
+        .login-password {
+          display: flex;
+          margin: 2em 1em 1em 1em;
+        }
       }
     </style>
   </head>
